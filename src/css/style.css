@@ -595,6 +595,7 @@ nav {
     font-size: 16px;
     border: none;
     color: dimgrey;
+    color: #101015;
     background-color: rgba(255,255,255,0.7);
     border-radius: 0px;
     height: 36px;
@@ -608,7 +609,7 @@ nav {
     background-color: rgba(255,255,255,0.7);
     padding-left: 12px;
     padding-top: 10px;
-    color: #5d5d5e;
+    color: #101015;
     width: 734px;
     height: 94px;
     margin-bottom: 26px;
