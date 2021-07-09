@@ -1,9 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Franklin Gothic Medium, sans-serif;
     width: 1920px;
-    overflow-y: scroll;
     overflow-x: hidden;
-    transform-style: preserve-3d;
 }
 
 nav {
@@ -11,6 +9,7 @@ nav {
     height: 60px;
     background: #344051;
     position: fixed;
+    z-index: 3;
 }
 
 .logo {
@@ -57,27 +56,21 @@ nav {
     text-transform: uppercase;
     opacity: 0;
 }
-
-.menu li:nth-child(2) {
+.menu li:nth-child(2){
     animation-delay: 0.4s;
 }
-
-.menu li:nth-child(3) {
+.menu li:nth-child(3){
     animation-delay: 0.8s;
 }
-
-.menu li:nth-child(4) {
+.menu li:nth-child(4){
     animation-delay: 1.2s;
 }
-
-.menu li:nth-child(5) {
+.menu li:nth-child(5){
     animation-delay: 1.6s;
 }
-
-.menu li:nth-child(6) {
+.menu li:nth-child(6){
     animation-delay: 2s;
 }
-
 .main {
     width: 100%;
     height: 100%;
@@ -96,22 +89,18 @@ nav {
     text-align: center;
 
 }
-
-@keyframes titlemove {
-    from {
+@keyframes titlemove{
+    from{
         opacity: 0;
         margin-left: -500px;
     }
-
-    to {
+    to{
         opacity: 1;
         margin-left: 404px;
     }
 }
-
 .title_container h1 {
     font-size: 60px;
-    font-weight: bold;
 }
 
 .title_container h4 {
@@ -152,19 +141,16 @@ nav {
         opacity: 1;
     }
 }
-
-@keyframes fallingtop {
-    from {
+@keyframes fallingtop{
+    from{
         opacity: 0;
         margin-top: -80px;
     }
-
-    to {
+    to{
         opacity: 1;
         margin-top: 0px;
     }
 }
-
 .about_me {
     width: 1920px;
     height: 716px;
@@ -173,17 +159,16 @@ nav {
 }
 
 .about_me h3 {
-    padding: 106px 900px;
+    padding: 106px 0px 106px 908px;
     color: #263244;
     font-size: 25px;
-    font-weight: bold;
 }
 
 .about_me p {
     font-size: 16px;
     color: #3f495a;
     margin: 224px 500px 0px 500px;
-
+    font-family: Calibri, sans-serif;
 }
 
 .about_me input {
@@ -199,8 +184,14 @@ nav {
     background-size: 16px;
     background-position: 9px 7px;
     color: #6f707e;
+    --animate-duration: 1.7s;
 }
-
+.about_me input:hover{
+    color: white;
+    background: url("../img/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B02.png") no-repeat, #344051;
+    background-size: 16px;
+    background-position: 9px 7px;
+}
 .what_i_can {
     height: 522px;
     width: 1920px;
@@ -208,45 +199,76 @@ nav {
 }
 
 .what_i_can h3 {
-    padding: 106px 0px 136px 876px;
+    padding: 106px 0px 100px 890px;
     color: #263244;
     font-size: 25px;
-    font-weight: bold;
     background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat;
 }
 
 .web-design {
-    height: 158px;
+    margin-top: 36px;
+    height: 156px;
     width: 214px;
+    overflow-y: hidden;
     margin-left: 418px;
     background: url("../img/%D0%BD%D0%BE%D1%83%D1%82.png") 50% 0%/auto auto no-repeat;
+    transform: scale(1);
+    transition-duration: 0.8s;
 }
-
+.web-design:hover{
+    margin-top: -25px;
+    height: 270px;
+    transform: scale(1.3);
+}
 .development {
-    height: 158px;
+    margin-top: 36px;
+    height: 156px;
     width: 214px;
+    overflow-y: hidden;
     margin-left: 82px;
     background: url("../img/%D0%B7%D0%BD%D0%B0%D0%BA.png") 50% 0%/auto auto no-repeat;
-
+    transform: scale(1);
+    transition-duration: 0.8s;
 }
-
+.development:hover{
+    margin-top: -25px;
+    height: 270px;
+    transform: scale(1.3);
+}
 .CEO {
-    height: 158px;
+    margin-top: 36px;
+    height: 156px;
     width: 214px;
+    overflow-y: hidden;
     margin-left: 82px;
     background: url("../img/%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%B0.png") 50% 0%/auto auto no-repeat;
+    transform: scale(1);
+    transition-duration: 0.8s;
 }
-
+.CEO:hover{
+    margin-top: -25px;
+    height: 270px;
+    transform: scale(1.3);
+}
 .Marketing {
-    height: 158px;
+    margin-top: 36px;
+    height: 156px;
     width: 214px;
+    overflow-y: hidden;
     margin-left: 82px;
     background: url("../img/%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D1%84%D0%BE%D0%BD.png") 50% 0%/auto auto no-repeat;
+    transform: scale(1);
+    transition-duration: 0.8s;
 }
-
+.Marketing:hover{
+    margin-top: -25px;
+    height: 270px;
+    transform: scale(1.3);
+}
 .web-design h5 {
     color: #cf7600;
     font-size: 16px;
+    font-family: Bahnschrift, sans-serif;
     padding: 72px 52px 14px 52px;
 }
 
@@ -254,11 +276,13 @@ nav {
     color: #515968;
     font-size: 16px;
     text-align: center;
+    font-family: Calibri, sans-serif;
 }
 
 .development h5 {
     color: #cf7600;
     font-size: 16px;
+    font-family: Bahnschrift, sans-serif;
     padding: 72px 52px 14px 52px;
 }
 
@@ -266,11 +290,13 @@ nav {
     color: #515968;
     font-size: 16px;
     text-align: center;
+    font-family: Calibri, sans-serif;
 }
 
 .CEO h5 {
     color: #cf7600;
     font-size: 16px;
+    font-family: Bahnschrift, sans-serif;
     padding: 72px 22px 14px 22px;
 }
 
@@ -278,11 +304,13 @@ nav {
     color: #515968;
     font-size: 16px;
     text-align: center;
+    font-family: Calibri, sans-serif;
 }
 
 .Marketing h5 {
     color: #cf7600;
     font-size: 16px;
+    font-family: Bahnschrift, sans-serif;
     padding: 72px 52px 14px 52px;
 }
 
@@ -290,6 +318,7 @@ nav {
     color: #515968;
     font-size: 16px;
     text-align: center;
+    font-family: Calibri, sans-serif;
 }
 
 .what_i_can li {
@@ -303,10 +332,9 @@ nav {
 }
 
 .cases h3 {
-    padding: 102px 0px 70px 912px;
+    padding: 102px 0px 70px 920px;
     color: #263244;
     font-size: 25px;
-    font-weight: bold;
     background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat;
 }
 
@@ -315,7 +343,7 @@ nav {
     text-align: center;
     color: #3f495a;
     font-size: 16px;
-
+    font-family: Calibri, sans-serif;
 }
 
 .client {
@@ -323,27 +351,27 @@ nav {
 }
 
 .client h4 {
-    font-weight: bold;
     color: #384354;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 12px;
 }
 
 .client span {
     font-size: 12px;
     color: #3f495a;
+    font-family: Calibri, sans-serif;
 }
 
 .website h4 {
     color: #384354;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 12px;
-    font-weight: bold;
 }
 
 .website span {
     font-size: 12px;
     color: #3f495a;
+    font-family: Calibri, sans-serif;
 }
 
 .cases_container input {
@@ -356,6 +384,11 @@ nav {
     color: white;
     border-radius: 5px;
     margin-top: 22px;
+    transform: scale(1);
+    transition-duration: 0.1s;
+}
+.cases_container input:active{
+    transform: scale(1.1);
 }
 
 .cases_1 {
@@ -372,20 +405,20 @@ nav {
 
 .cases_2 h4 {
     color: #384354;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 .cases_2 p {
     color: #3f495a;
     font-size: 16px;
     margin-top: 6px;
+    font-family: Calibri, sans-serif;
+    line-height: 20px;
 }
 
 .price > h3 {
-    font-size: 30px;
+    font-size: 34px;
     text-align: center;
-    font-weight: bold;
     margin-bottom: 54px;
     color: #1c2534;
 }
@@ -422,18 +455,6 @@ nav {
     font-size: 22px;
 }
 
-.type h3 {
-    font-weight: bold;
-}
-
-.design h3 {
-    font-weight: bold;
-}
-
-.adaptive h3 {
-    font-weight: bold;
-}
-
 .price img {
     display: block;
     margin-left: 494px;
@@ -446,16 +467,15 @@ nav {
 
 .deadline p {
     color: #1c2534;
-    font-size: 14px;
+    font-size: 16px;
     float: left;
 }
 
 .deadline span {
     display: block;
-    margin-left: 880px;
+    margin-left: 876px;
     color: #1c2534;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 22px;
 }
 
 .cost {
@@ -464,46 +484,29 @@ nav {
 
 .cost p {
     color: #1c2534;
-    font-size: 14px;
+    font-size: 16px;
     float: left;
 }
 
 .cost span {
     display: block;
-    margin-left: 880px;
+    margin-left: 876px;
     color: #1c2534;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 22px;
 }
 
 .statistics {
     margin-top: 152px;
+    background: url("../img/%D1%84%D0%BE%D0%BD%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8.jpg") no-repeat;
     height: 499px;
     width: 1920px;
-    box-sizing: border-box;
-    transform-style: inherit;
-    width: 100vw;
-}
-.statistics::before {
-    display: block;
-    background: url("../img/%D1%84%D0%BE%D0%BD%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8.jpg") no-repeat;
-    background-size: cover;
-    content: '';
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    transform-origin: center;
-    transform: translateZ(-1px) scale(2);
+
 }
 
 .statistics > h3 {
-    padding: 106px 0px 136px 806px;
+    padding: 106px 0px 136px 830px;
     color: #263244;
     font-size: 25px;
-    font-weight: bold;
     background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat;
 }
 
@@ -520,7 +523,7 @@ nav {
 .clients h3 {
     margin-top: 22px;
     margin-bottom: 20px;
-    font-weight: 900;
+    font-weight: bold;
     font-size: 22px;
 }
 
@@ -588,10 +591,9 @@ nav {
 }
 
 .reviews h3 {
-    padding: 106px 0px 94px 898px;
+    padding: 106px 0px 94px 908px;
     color: #263244;
     font-size: 25px;
-    font-weight: bold;
     background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat;
 }
 
@@ -604,6 +606,7 @@ nav {
     margin: 32px 616px;
     text-align: center;
     font-size: 16px;
+    font-family: Calibri, sans-serif;
 }
 
 .reviews h5 {
@@ -611,6 +614,7 @@ nav {
     margin-top: 34px;
     text-align: center;
     font-size: 16px;
+    font-family: Calibri, sans-serif;
 }
 
 .points {
@@ -628,10 +632,9 @@ nav {
 }
 
 .contacts h3 {
-    padding: 106px 0px 70px 852px;
+    padding: 106px 0px 70px 869px;
     color: #FFF;
     font-size: 25px;
-    font-weight: bold;
     background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat;
 }
 
@@ -640,6 +643,7 @@ nav {
     color: white;
     font-size: 16px;
     margin-bottom: 46px;
+    font-family: Calibri, sans-serif;
 }
 
 .contacts_2 li {
@@ -651,6 +655,7 @@ nav {
     float: left;
     margin-left: 604px;
     text-align: center;
+    font-family: Calibri, sans-serif;
 }
 
 .city h5 {
@@ -662,6 +667,7 @@ nav {
     float: left;
     margin-left: 102px;
     text-align: center;
+    font-family: Calibri, sans-serif;
 }
 
 .email h5 {
@@ -671,6 +677,7 @@ nav {
 
 .number {
     padding-left: 1150px;
+    font-family: Calibri, sans-serif;
 
 }
 
@@ -705,8 +712,11 @@ nav {
     height: 46px;
     width: 124px;
     margin-left: 302px;
+    transform: scale(1);
 }
-
+form>input:active{
+    transform: scale(1.1);
+}
 .info > input {
     font-size: 16px;
     border: none;
