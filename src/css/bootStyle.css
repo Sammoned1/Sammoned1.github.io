@@ -1,0 +1,214 @@
+body {
+    font-family: Franklin Gothic Medium, sans-serif;
+    width: 1920px;
+    overflow-x: hidden;
+}
+div{
+    border: 1px solid red;
+}
+nav {
+    width: 100%;
+    height: 60px;
+    background: #344051;
+    position: fixed;
+    z-index: 100;
+}
+.logo {
+    color: #FFF;
+    font-size: 20px;
+    line-height: 60px;
+    float: left;
+    animation: coming 2s ease;
+}
+.menu {
+    float: left;
+}
+ul li{
+    list-style: none;
+}
+.menu li a {
+    text-decoration: none;
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a:visited {
+    color: white;
+}
+
+.menu li a:hover {
+    color: #ef8800;
+}
+
+.menu li a:active {
+    color: #ef8800;
+    transform: scale(1.1)
+}
+
+.menu li {
+    animation: fallingtop 0.4s ease forwards;
+    float: left;
+    color: #FFF;
+    line-height: 60px;
+    margin-right: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+.menu li:nth-child(7){
+    animation-delay: 2.4s;
+}
+@keyframes coming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fallingtop{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.white-btn{
+    color:white;
+}
+.white-btn:hover{
+    background: #ef8800;
+}
+.white-btn:visited{
+    background: #ef8800;
+}
+.main {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C.png") 90% 100%/auto 85% no-repeat, url("../img/%D1%84%D0%BE%D0%BD.jpg") center/cover no-repeat;
+}
+.title_container {
+    animation: titlemove 0.8s ease forwards;
+    /*opacity: 0;*/
+    -webkit-animation-delay: 2.8s;
+    -o-animation-delay: 2.8s;
+    animation-delay: 2.8s;
+    color: #2c384a;
+    text-align: center;
+    width: 100%;
+}
+.title_container h1 {
+    font-size: 78px;
+}
+
+.title_container h4 {
+    margin-top: 40px;
+    font-size: 22px;
+    color: #79818d;
+}
+
+.title_container input {
+    transition: all 0.2s;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 6px;
+    color: #6d7682;
+    font-size: 13px;
+    padding: 0px 16px;
+    margin: 58px 14px 0px 14px;
+    transform: scale(1);
+}
+
+.title_container input:hover {
+    background: #344051;
+    color: white;
+}
+
+.title_container input:active {
+    transform: scale(1.1);
+}
+@media (max-width: 991px){
+    .title_container, .title_container h4{
+        color: white;
+        position: relative;
+        z-index: 3;
+    }
+    .title_container input{
+        color: white;
+        border-color: white;
+        position: relative;
+        z-index: 3;
+    }
+    .main{
+        position: relative;
+    }
+    .main::after{
+        content: '';
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: absolute;
+        background: rgba(0,0,0,0.3);
+    }
+}
+.about_me {
+    width: 100vw;
+    height: 716px;
+    background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat, url("../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0.jpg") 50% 224px/210px 210px no-repeat;
+
+}
+.about_me h3 {
+    color: #263244;
+    font-size: 25px;
+}
+
+.about_me p {
+    font-size: 16px;
+    color: #3f495a;
+    font-family: Calibri, sans-serif;
+}
+
+.about_me input {
+    display: block;
+    padding-left: 16px;
+    font-size: 14px;
+    border: 2px solid #6f707e;
+    width: 158px;
+    height: 34px;
+    border-radius: 5px;
+    background: url("../img/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0.png") no-repeat;
+    background-size: 16px;
+    background-position: 9px 7px;
+    color: #6f707e;
+    --animate-duration: 1.7s;
+}
+.about_me input:hover{
+    color: white;
+    background: url("../img/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B02.png") no-repeat, #344051;
+    background-size: 16px;
+    background-position: 9px 7px;
+}

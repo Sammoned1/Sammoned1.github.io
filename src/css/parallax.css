@@ -1,0 +1,104 @@
+.statistics {
+    margin-top: 152px;
+    height: 500px;
+    width: 1920px;
+
+}
+
+.content>h3 {
+    padding: 106px 0px 136px 830px;
+    color: #263244;
+    font-size: 25px;
+    background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat;
+}
+
+.content li {
+    float: left;
+}
+
+.clients {
+    margin-left: 438px;
+    text-align: center;
+    color: #323e4f;
+}
+
+.clients h3 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.clients h4 {
+    font-size 16px;
+    font-weight: 500;
+}
+
+.hours {
+    margin-left: 156px;
+    text-align: center;
+    color: #323e4f;
+}
+
+.hours h3 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.hours h4 {
+    font-size 16px;
+    font-weight: 500;
+}
+
+.projects {
+    margin-left: 156px;
+    text-align: center;
+    color: #323e4f;
+}
+
+.projects h3 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.projects h4 {
+    font-size 16px;
+    font-weight: 500;
+}
+
+.rewards {
+    margin-left: 156px;
+    text-align: center;
+    color: #323e4f;
+}
+
+.rewards h3 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.rewards h4 {
+    font-size 16px;
+    font-weight: 500;
+}
+.parallax{
+    position: relative;
+}
+
+.parallax_background{
+    display: block;
+    width: 100%;
+}
+.content{
+    border: 1px solid red;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+}
