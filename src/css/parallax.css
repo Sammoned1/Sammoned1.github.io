@@ -1,23 +1,17 @@
 .statistics {
-    margin-top: 152px;
-    height: 500px;
-    width: 1920px;
-
+    height: 46%;
+    width: 100vw;
+    margin-top: 32px;
+    overflow:hidden;
 }
 
 .content>h3 {
-    padding: 106px 0px 136px 830px;
     color: #263244;
     font-size: 25px;
-    background: url("../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png") 50% 160px/auto auto no-repeat;
 }
 
-.content li {
-    float: left;
-}
 
 .clients {
-    margin-left: 438px;
     text-align: center;
     color: #323e4f;
 }
@@ -35,7 +29,6 @@
 }
 
 .hours {
-    margin-left: 156px;
     text-align: center;
     color: #323e4f;
 }
@@ -53,7 +46,6 @@
 }
 
 .projects {
-    margin-left: 156px;
     text-align: center;
     color: #323e4f;
 }
@@ -71,7 +63,6 @@
 }
 
 .rewards {
-    margin-left: 156px;
     text-align: center;
     color: #323e4f;
 }
@@ -91,14 +82,32 @@
     position: relative;
 }
 
-.parallax_background{
+.parallax_bg{
     display: block;
-    width: 100%;
+    height: 500px;
 }
 .content{
-    border: 1px solid red;
     position: absolute;
-    bottom: -100px;
-    right: 0;
-    left: 0;
+    bottom: -180%;
+    right: 0%;
+    left: 0%;
+}
+.parallax_bg_2{
+    display:none;
+}
+div{
+    border:1px solid red;
+}
+.stat_bg{
+    display: flex;
+    justify-content:center;
+}
+@media (max-width: 767px){
+    .parallax_bg{
+        display: none;
+    }
+    .parallax_bg_2{
+        display: flex;
+        justify-content:center;
+    }
 }
