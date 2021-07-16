@@ -2,6 +2,9 @@
 
 $(function () {
     let w = $(window);
+    
+    parallax(w.scrollTop());
+    
     w.on('scroll', function () {
         let top = $(this).scrollTop();
         parallax(top)

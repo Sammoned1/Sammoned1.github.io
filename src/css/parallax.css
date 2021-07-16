@@ -2,10 +2,10 @@
     height: 46%;
     width: 100vw;
     margin-top: 32px;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.content>h3 {
+.content > h3 {
     color: #263244;
     font-size: 25px;
 }
@@ -17,7 +17,7 @@
 }
 
 .clients h3 {
-    margin-top: 22px;
+    margin-top: 18px;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 22px;
@@ -68,7 +68,7 @@
 }
 
 .rewards h3 {
-    margin-top: 22px;
+    margin-top: 18px;
     margin-bottom: 20px;
     font-weight: 900;
     font-size: 22px;
@@ -78,36 +78,70 @@
     font-size 16px;
     font-weight: 500;
 }
-.parallax{
+
+.parallax {
     position: relative;
 }
 
-.parallax_bg{
+.parallax_bg {
     display: block;
     height: 500px;
 }
-.content{
+
+.content {
     position: absolute;
     bottom: -180%;
     right: 0%;
     left: 0%;
+    z-index: 12;
 }
-.parallax_bg_2{
-    display:none;
+
+.parallax_bg_2 {
+    display: none;
 }
-div{
-    border:1px solid red;
-}
-.stat_bg{
+
+.stat_bg {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
-@media (max-width: 767px){
-    .parallax_bg{
+@media (max-width: 991px){
+    .content {
+        right: 0%;
+        left: 0%;
+        bottom: -204%;
+    }
+}
+@media (max-width: 767px) {
+    .parallax_bg {
         display: none;
     }
-    .parallax_bg_2{
-        display: flex;
-        justify-content:center;
+
+    .parallax_bg_2 {
+        display: block;
+        height: 800px;
+        z-index: 1;
+    }
+
+    .stat_bg::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 10;
+    }
+
+    .content {
+        right: 0%;
+        left: 0%;
+        bottom: -115%;
+    }
+    
+    .content_2{
+        flex-wrap: wrap;
     }
 }
+
