@@ -40,13 +40,13 @@ ul li {
 .menu li a:visited {
     color: white;
 }
+#ef8800
 
-.menu li a:hover {
+.active{
     color: #ef8800;
 }
 
 .menu li a:active {
-    color: #ef8800;
     transform: scale(1.1)
 }
 
@@ -754,12 +754,23 @@ ul li {
 }
 
 .contacts {
-    background: url("../img/%D1%84%D0%BE%D0%BD%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%BE%D0%B2.jpg") no-repeat;
     height: 808px;
     color:white;
     position:relative;
 }
-
+.contacts_background{
+    display: block;
+    height: 810px;
+    z-index: 0;
+}
+.contacts_content{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    z-index:12;
+}
 .contacts h3 {
     color: #FFF;
     font-size: 25px;
@@ -773,7 +784,6 @@ ul li {
 }
 
 .city {
-    
     text-align: center;
     font-family: Calibri, sans-serif;
 }
@@ -816,7 +826,8 @@ ul li {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 0px;
     height: 36px;
-    width: 351px;
+    max-width: 351px;
+    width: 100%;
     padding-left: 12px;
 }
 
@@ -826,7 +837,8 @@ ul li {
     padding-left: 12px;
     padding-top: 10px;
     color: #101015;
-    width: 734px;
+    max-width: 734px;
+    width: 100%;
     height: 94px;
 }
 
@@ -837,4 +849,5 @@ textarea{
     border:none;
 }
 
+@media
 
