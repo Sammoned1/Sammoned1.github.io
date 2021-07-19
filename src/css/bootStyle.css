@@ -37,13 +37,12 @@ ul li {
     display: inline-block;
 }
 
+.active{
+    color: #ef8800!important;
+}
+
 .menu li a:visited {
     color: white;
-}
-#ef8800
-
-.active{
-    color: #ef8800;
 }
 
 .menu li a:active {
@@ -105,9 +104,6 @@ ul li {
         opacity: 1;
         margin-top: 0px;
     }
-}
-.main{
-    
 }
 .btn-outline-secondary,
 .dropdown-toggle.show {
@@ -848,6 +844,6 @@ ul li {
 textarea{
     border:none;
 }
-
-@media
-
+div{
+    border: 1px solid red;
+}
