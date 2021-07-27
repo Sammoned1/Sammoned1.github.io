@@ -13,14 +13,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/bootStyle.css">
     <link rel="stylesheet" href="css/parallax.css">
 </head>
 
 <body>
-
-   
-   
     <header>
         <nav>
             <div class="container">
@@ -31,13 +30,13 @@
                     <div class="col-xxl-7 col-xl-9 offset-xxl-3 offset-xl-1 col-lg-10 d-lg-block d-none">
                         <div class="menu">
                             <ul>
+                                <li><a class="active" href="#main">Главная</a></li>
                                 <li><a href="#about_me">Обо мне</a></li>
                                 <li><a href="#what_i_can">Услуги</a></li>
                                 <li><a href="#cases">Кейсы</a></li>
                                 <li><a href="#price">Прайс</a></li>
                                 <li><a href="#reviews">Отзывы</a></li>
                                 <li><a href="#contacts">Контакты</a></li>
-                                <li><a href="loader.html" target="_blank">Лоадер</a></li>
                             </ul>
                         </div>
                     </div>
@@ -62,7 +61,7 @@
         </nav>
     </header>
 
-    <section class="main" id="main">
+    <section class="main section" id="main">
         <div class="container h-100">
             <div class="row align-items-center h-100">
                 <div class="col-lg-6 mt-5 pt-5">
@@ -161,7 +160,16 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic laborum, velit esse, eaque numquam deserunt deleniti qui praesentium animi assumenda.</p>
                 </div>
                 <div class="col-lg-12 d-lg-flex d-none justify-content-center cases_background">
-                    <img class="w-100" src="img/%D0%BA%D0%B5%D0%B9%D1%81.jpg" alt="">
+                    <div class="">
+                        <img class="w-100" src="img/%D0%BA%D0%B5%D0%B9%D1%81.jpg" alt="">
+                    </div>
+                    <div class="">
+                        <img class="w-100" src="img/%D0%BA%D0%B5%D0%B9%D1%81.jpg" alt="">
+                    </div>
+                    <div class="">
+                        <img class="w-100" src="img/%D0%BA%D0%B5%D0%B9%D1%81.jpg" alt="">
+                    </div>
+
                 </div>
             </div>
             <div class="row flex-lg-row-reverse justify-content-end w-100 mt-5">
@@ -202,14 +210,15 @@
                         <h3>ТИП САЙТА</h3>
                     </div>
                     <div class="col-5 d-flex justify-content-center mb-5 w-100">
-                        <select name="siteName" id="list">
+                        <select name="siteName" id="typeList">
                             <option value="choose">Выберите пункт...</option>
-                            <option value="opt1">Сайт-визитка</option>
-                            <option value="opt2">Корпоративный сайт</option>
-                            <option value="opt3">Интернет-магазин</option>
-                            <option value="opt3">Лендинг</option>
-                            <option value="opt3">Тематический сайт</option>
-                            <option value="opt3">Веб-сервис</option>
+                            <option value="6000">Сайт-визитка</option>
+                            <option value="30000">Корпоративный сайт</option>
+                            <option value="25000">Интернет-магазин</option>
+                            <option value="5000">Лендинг</option>
+                            <option value="some">Тематический сайт</option>
+                            <option value="some">Веб-сервис</option>
+                            <option value="help">Я не знаю какой сайт мне нужен</option>
                         </select>
                     </div>
                 </div>
@@ -218,10 +227,10 @@
                         <h3>ДИЗАЙН</h3>
                     </div>
                     <div class="col-6 d-flex justify-content-center mb-5 w-100">
-                        <select name="design_c" id="list">
+                        <select name="design_c" id="designList">
                             <option value="choose">Выберите пункт...</option>
-                            <option value="opt1">Не анимированный</option>
-                            <option value="opt2">Анимированный</option>
+                            <option value="0">Не анимированный</option>
+                            <option value="4000">Анимированный</option>
                         </select>
                     </div>
                 </div>
@@ -230,11 +239,11 @@
                         <h3>АДАПТИВНОСТЬ</h3>
                     </div>
                     <div class="col-6 d-flex justify-content-center mb-4 w-100">
-                        <select name="adaptability" id="list">
+                        <select name="adaptability" id="adaptiveList">
                             <option value="choose">Выберите пункт...</option>
-                            <option value="opt1">Не адаптивный</option>
-                            <option value="opt2">Частично адаптивный</option>
-                            <option value="opt3">Адаптивный</option>
+                            <option value="0">Не адаптивный</option>
+                            <option value="3000">Частично адаптивный</option>
+                            <option value="5000">Адаптивный</option>
                         </select>
                     </div>
                 </div>
@@ -245,24 +254,32 @@
                 </div>
                 <div class="row deadline px-4">
                     <div class="col-6">
-                        <p><big>Сроки</big></p>
+                        <p><big>Стоимость</big></p>
+
                     </div>
-                    <div class="col-6 d-flex justify-content-end ">
+                    <div class="col-6 d-flex justify-content-end scrollD">
                         <span><big>0</big></span>
                     </div>
                 </div>
                 <div class="row cost px-4">
                     <div class="col-6 d-flex">
-                        <p><big>Стоимость</big></p>
+                        <p><big>Сроки</big></p>
                     </div>
-                    <div class="col-6 d-flex justify-content-end">
+                    <div class="col-6 d-flex justify-content-end scrollC">
                         <span><big>0</big></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center mb-5 mt-4 price_input">
-                        <input type="submit" value="Оставить заявку">
+                        <input type="submit" value="Узнать примерную цену">
                     </div>
+                    <div class="col-6 d-none mb-5 mt-4 price_input">
+                        <input type="submit" value="Узнать примерную цену">
+                    </div>
+                    <div class="col-6 d-none mb-5 mt-4 price_input">
+                        <input type="submit" value="Узнать примерную цену">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -287,22 +304,22 @@
                 <div class="row mt-4 content_2">
                     <div class="col-lg-3 col-6 mb-4 clients">
                         <img src="img/%D1%81%D0%BC%D0%B0%D0%B9%D0%BB.png" alt="">
-                        <h3><big>120</big></h3>
+                        <h3 class="count"><big>120</big></h3>
                         <h4>СЧАСТЛИВЫХ КЛИЕНТОВ</h4>
                     </div>
                     <div class="col-lg-3 col-6 mb-4 hours">
                         <img src="img/%D1%81%D0%BA%D0%BE%D0%B1%D0%BA%D0%B8.png" alt="">
-                        <h3><big>4,600</big></h3>
+                        <h3 class="count"><big>4600</big></h3>
                         <h4>ЧАСОВ РАБОТЫ</h4>
                     </div>
                     <div class="col-lg-3 col-6 projects">
                         <img src="img/%D0%B3%D0%B0%D0%BB%D0%BE%D1%87%D0%BA%D0%B0.png" alt="">
-                        <h3><big>340</big></h3>
+                        <h3 class="count"><big>340</big></h3>
                         <h4>ПРОЕКТОВ ЗАВЕРШЕНО</h4>
                     </div>
                     <div class="col-lg-3 col-6 rewards">
                         <img src="img/%D0%BA%D1%83%D0%B1%D0%BE%D0%BA.png" alt="">
-                        <h3><big>23</big></h3>
+                        <h3 class="count"><big>23</big></h3>
                         <h4>НАГРАД ПОЛУЧЕНО</h4>
                     </div>
                 </div>
@@ -311,35 +328,57 @@
     </section>
 
     <section class="reviews section" id="reviews">
-        <div class="container d-flex justify-content-center h-100">
-            <div class="row flex-column justify-content-center align-items-center h-100 w-75">
-                <div class="col-2 d-flex justify-content-center mb-3">
+        <div class="container d-flex flex-column align-items-center h-100 pt-4">
+            <div class="row flex-column justify-content-center align-items-center h-25 w-75 mb-4">
+                <div class="col-6 d-flex justify-content-center mt-4 mb-3">
                     <h3>ОТЗЫВЫ</h3>
                 </div>
-                <div class="col-2 d-flex justify-content-center mb-5">
+                <div class="col-6 d-flex justify-content-center">
                     <img src="img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png" alt="">
                 </div>
-                <div class="col-2 d-flex justify-content-center mt-2 mb-4">
-                    <img src="img/%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%B3%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%D0%B0.jpg" alt="">
+            </div>
+            <div class="row flex-column h-50 w-75 slideReviews mt-4">
+                <div class="col-12 h-100">
+                    <div class="row flex-column align-items-center">
+                        <div class="col-4 d-flex justify-content-center mb-4">
+                            <img src="img/%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%B3%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%D0%B0.jpg" alt="">
+                        </div>
+                        <div class="col-4 d-flex justify-content-center  w-75 mb-2 mt-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vitae molestiae delectus recusandae, cumque provident assumenda cupiditate voluptatibus rerum fugiat?</p>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center  w-100">
+                            <h5><big>Михаил</big>, Ген директор ПАО "Газпром"</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-2 d-flex justify-content-center mb-3 w-100">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vitae molestiae delectus recusandae, cumque provident assumenda cupiditate voluptatibus rerum fugiat?</p>
+                <div class="col-12 h-100">
+                    <div class="row flex-column align-items-center">
+                        <div class="col-4 d-flex justify-content-center mb-4">
+                            <img src="img/%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%B3%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%D0%B0.jpg" alt="">
+                        </div>
+                        <div class="col-4 d-flex justify-content-center  w-75 mb-2 mt-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vitae molestiae delectus recusandae, cumque provident assumenda cupiditate voluptatibus rerum fugiat?</p>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center  w-100">
+                            <h5><big>Михаил</big>, Ген директор ПАО "Газпром"</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-2 d-flex justify-content-center mb-5 w-100">
-                    <h5><big>Михаил</big>, Ген директор ПАО "Газпром"</h5>
-                </div>
-                <div class="col-2 d-flex justify-content-evenly px-4 points">
-                    <input type="radio" name="dot" value="1">
-                    <input type="radio" name="dot" value="2">
-                    <input type="radio" name="dot" value="3">
+                <div class="col-12 h-100">
+                    <div class="row flex-column align-items-center">
+                        <div class="col-4 d-flex justify-content-center mb-4">
+                            <img src="img/%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%B3%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%D0%B0.jpg" alt="">
+                        </div>
+                        <div class="col-4 d-flex justify-content-center  w-75 mb-2 mt-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vitae molestiae delectus recusandae, cumque provident assumenda cupiditate voluptatibus rerum fugiat?</p>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center  w-100">
+                            <h5><big>Михаил</big>, Ген директор ПАО "Газпром"</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
     </section>
 
     <section class="contacts section" id="contacts">
@@ -366,7 +405,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-6 email">
-                   <img src="img/%D1%82%D1%80%D1%83%D0%B1%D0%B0.png" alt="" class="mb-2">
+                    <img src="img/%D1%82%D1%80%D1%83%D0%B1%D0%B0.png" alt="" class="mb-2">
                     <h5><big>+7 999 999-99-99</big></h5>
                 </div>
                 <div class="col-md-4 col-12 d-flex justify-content-md-start justify-content-center">
@@ -407,7 +446,7 @@
     </section>
 
     <section class="map">
-        <h4>I'M HERE</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.91585396797!2d37.62403542592267!3d55.75175243936045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5962e69605%3A0xa4cf168ae7cb3ae5!2z0KXRgNCw0Lwg0JLQsNGB0LjQu9C40Y8g0JHQu9Cw0LbQtdC90L3QvtCz0L4!5e0!3m2!1sru!2sru!4v1627314241702!5m2!1sru!2sru" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <footer>
@@ -415,6 +454,9 @@
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="slick/slick.js"></script>
     <script src="js/myscript.js"></script>
     <script src="js/parallax.js"></script>
 </body>
