@@ -332,6 +332,7 @@ ul li {
     font-size: 25px;
 }
 
+
 .web-design {
     height: 156px;
     width: 214px;
@@ -569,7 +570,8 @@ ul li {
     font-family: Calibri, sans-serif;
 }
 
-.cases_1 input {
+.cases_1 input,
+.send_request input {
     height: 44px;
     width: 202px;
     border: 2px solid #63b5ae;
@@ -598,7 +600,8 @@ ul li {
 }
 
 .cases_1 input:active,
-.price_input input:active {
+.price_input input:active,
+.send_request input:active {
     transform: scale(1.1);
 }
 
@@ -692,7 +695,6 @@ ul li {
 }
 
 .price select {
-    background: url("../img/pcrice_paragraph.png");
     width: 892px;
     height: 58px;
     padding-left: 24px;
@@ -700,21 +702,14 @@ ul li {
     line-height: 58px;
     font-size: 14px;
     border: none;
-    position:relative;
-    
-    
-}
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: url('../img/angleDown.png') no-repeat 96% 50%, url('../img/pcrice_paragraph.png');
+    outline: 0;
 
-.price select::after{
-    content: '';
-    position: absolute;
-    right:0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: url("../img/arrowDown.png");
-    z-index: 10!important;
-    
 }
 
 .type h3 {
@@ -916,32 +911,35 @@ footer h5 {
 
 
 
-.scrollPrice{
+.scrollPrice {
     animation: scrollPrice;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
 }
 
 @keyframes scrollPrice {
-    0%{
+    0% {
         opacity: 1;
         transform: translate(0, 0);
     }
-    33%{
+
+    33% {
         opacity: 0;
         transform: translate(0, -50%);
     }
-    66%{
+
+    66% {
         opacity: 0;
         transform: translate(0, 50%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translate(0, 0);
     }
 }
 
-.cost, .deadline{
+.cost,
+.deadline {
     overflow: hidden;
 }
-

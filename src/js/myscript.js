@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $('select').val('choose');
+
+
     //Подсветка элементов меню при прокрутке страницы
     $(window).scroll(function activeFunc() {
         let scrollDistance = $(window).scrollTop();
@@ -20,46 +23,34 @@ $(document).ready(function () {
             scrollTop: $(valHref).offset().top - 60 + "px"
         });
     });
-    
-
-    //Попытался сделать отложенную анимацию с добвалением класса countStart
 
     let options = {
         threshold: [0.5]
     };
-    let observer = new IntersectionObserver(onEntry, options);
     let elements = $('.count');
+    let observer = new IntersectionObserver(onEntry, options);
     elements.each((i, el) => {
         observer.observe(el);
     });
 
     function onEntry(entry) {
-        entry.forEach(change => {
+        entry.forEach((change) => {
             if (change.isIntersecting) {
-                change.target.classlist.add('countStart');
+                function scrollNumbers() {
+                    $(change.target).prop('Counter', 0).animate({
+                        Counter: $(change.target).text()
+                    }, {
+                        duration: 800,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(change.target).text(Math.ceil(now));
+                        }
+                    })
+                }
+                scrollNumbers();
             }
         });
     }
-
-    //Функция прокрутки цифр для элементов с классом countStart (h3 заголовки в статистике)
-
-    $(".countStart").each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 1500,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        })
-    })
-
-    //Моя задумка в том, чтобы функция прокрутки чисел срабатывала после добавления класса countStart элементам с классом count(h3 заголовки в статистике) , но классы просто не добавляются
-
-
-
-
 
     //Калькулятор
 
@@ -75,6 +66,9 @@ $(document).ready(function () {
         } else if (type == 'help' || type == 'some') {
             totalPrice = 'Цена по договоренности';
             $('.deadline span').text(totalPrice);
+            $('.deadline span').text(totalPrice);
+            $('.price_input').removeClass('col-12').addClass('col-6');
+            $('.send_request').removeClass('d-none').addClass('d-flex');
         } else {
             if (design == 'choose')
                 design = 0;
@@ -93,11 +87,14 @@ $(document).ready(function () {
             //не могу понять как сделать так, чтобы при нажатии на эту же кнопку каждый раз повторялась css анимация scrollPrice
 
             $('.deadline span').text(totalPrice);
-
+            $('.price_input').removeClass('col-12').addClass('col-6');
+            $('.send_request').removeClass('d-none').addClass('d-flex');
             if (totalTime >= 5)
                 $('.cost span').text(totalTime + ' дней');
             else
                 $('.cost span').text(totalTime + ' дня');
+
+
         }
     });
 
@@ -111,15 +108,16 @@ $(document).ready(function () {
         fade: true,
         cssEase: 'linear'
     });
-    
+
     $('.slideReviews').slick({
         dots: true,
     });
 
-
-
-
-
+    $('.send_request').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#contacts').offset().top - 60 + "px"
+        });
+    });
 
 
 

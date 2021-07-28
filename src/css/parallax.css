@@ -19,12 +19,12 @@
 .clients h3 {
     margin-top: 18px;
     margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 22px;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 .clients h4 {
-    font-size 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -37,11 +37,11 @@
     margin-top: 22px;
     margin-bottom: 20px;
     font-weight: 900;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .hours h4 {
-    font-size 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -54,11 +54,11 @@
     margin-top: 22px;
     margin-bottom: 20px;
     font-weight: 900;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .projects h4 {
-    font-size 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -71,11 +71,11 @@
     margin-top: 18px;
     margin-bottom: 20px;
     font-weight: 900;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .rewards h4 {
-    font-size 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 
