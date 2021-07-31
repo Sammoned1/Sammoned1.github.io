@@ -269,8 +269,17 @@ ul li {
     background-position: 9px 7px;
 }
 
-.description p {
+.description {
     margin-bottom: 30px;
+    transform: translate(0,120%);
+    transition-duration: 0.8s;
+    opacity:0;
+}
+
+.showDescription{
+    transition-duration: 0.8s;
+    transform: translate(0,0);
+    opacity:1;
 }
 
 .what_i_can {
@@ -332,44 +341,33 @@ ul li {
     font-size: 25px;
 }
 
-
-.web-design {
-    height: 156px;
-    width: 214px;
-    overflow-y: scroll;
+.hidden{
+    transform: scale(0);
+    transition-duration: 0.8s;
+}
+.shown{
     transform: scale(1);
     transition-duration: 0.8s;
 }
-
-.development {
+.web-design,.development,.CEO,.Marketing {
     height: 156px;
     width: 214px;
     overflow-y: scroll;
-    transform: scale(1);
     transition-duration: 0.8s;
+    
 }
-
-
-
-.CEO {
-    height: 156px;
-    width: 214px;
-    overflow-y: scroll;
-    transform: scale(1);
-    transition-duration: 0.8s;
+.web-design{
+    transition-delay: 0s;
 }
-
-
-
-.Marketing {
-    height: 156px;
-    width: 214px;
-    overflow-y: scroll;
-    transform: scale(1);
-    transition-duration: 0.8s;
+.development{
+    transition-delay: 0.1s;
 }
-
-
+.CEO{
+    transition-delay: 0.2s;
+}
+.Marketing{
+    transition-delay: 0.3s;
+}
 
 .web-design h5 {
     color: #cf7600;
@@ -828,6 +826,8 @@ ul li {
 .city {
     text-align: center;
     font-family: Calibri, sans-serif;
+    transition-duration: 0.8s;
+    transition-delay: 0.1s;
 }
 
 .city h5,
@@ -839,11 +839,15 @@ ul li {
 .email {
     text-align: center;
     font-family: Calibri, sans-serif;
+    transition-duration: 0.8s;
+    transition-delay: 0.5s;
 }
 
 .number {
     text-align: center;
     font-family: Calibri, sans-serif;
+    transition-duration: 0.8s;
+    transition-delay: 0.3s;
 }
 
 .send_me_message h4 {

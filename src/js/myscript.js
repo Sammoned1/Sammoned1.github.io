@@ -1,11 +1,14 @@
 $(document).ready(function () {
+    
+    
+    
     $('select').val('choose');
-
-
+    
+    
     //Подсветка элементов меню при прокрутке страницы
     $(window).scroll(function activeFunc() {
         let scrollDistance = $(window).scrollTop();
-        $(".section").each((i, el) => {
+        $("section").each((i, el) => {
             if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance + 200) {
                 $("nav a").each((i, el) => {
                     if ($(el).hasClass("active")) {
@@ -24,16 +27,18 @@ $(document).ready(function () {
         });
     });
 
+    //Бегущие цифры
+
     let options = {
         threshold: [0.5]
     };
     let elements = $('.count');
-    let observer = new IntersectionObserver(onEntry, options);
+    let observer = new IntersectionObserver(numbers, options);
     elements.each((i, el) => {
         observer.observe(el);
     });
 
-    function onEntry(entry) {
+    function numbers(entry) {
         entry.forEach((change) => {
             if (change.isIntersecting) {
                 function scrollNumbers() {
@@ -119,6 +124,53 @@ $(document).ready(function () {
         });
     });
 
+    //Появление услуг
 
+    let elements_2 = $('.hidden');
+    let observer_2 = new IntersectionObserver(show, options);
+    elements_2.each((i, el) => {
+        observer_2.observe(el);
+    });
+
+    function show(entry) {
+        entry.forEach((change) => {
+            if (change.isIntersecting) {
+                change.target.classList.remove('hidden');
+                change.target.classList.add('show');
+            }
+        });
+    };
+
+//    Анимация описания обо мне
+    
+    let elements_3 = $('.description');
+    let observer_3 = new IntersectionObserver(show_2, options);
+    elements_3.each((i, el) => {
+        observer_3.observe(el);
+    });
+
+    function show_2(entry) {
+        entry.forEach((change) => {
+            if (change.isIntersecting) {
+                change.target.classList.add('showDescription');
+            }
+        });
+    };
+
+
+    //    Попап
+
+    $(document).ready(function () {
+        $('.image-link').magnificPopup({
+            type: 'image'
+        });
+    });
+    
+//    Таймер
+    
+    setTimeout(function(){
+        alert('Сработало!')
+    },2000);
+    
 
 });
