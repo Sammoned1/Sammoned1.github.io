@@ -1,0 +1,147 @@
+.statistics {
+    height: 46%;
+    width: 100vw;
+    margin-top: 32px;
+    overflow: hidden;
+}
+
+.content > h3 {
+    color: #263244;
+    font-size: 25px;
+}
+
+
+.clients {
+    text-align: center;
+    color: #323e4f;
+}
+
+.clients h3 {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.clients h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hours {
+    text-align: center;
+    color: #323e4f;
+}
+
+.hours h3 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.hours h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.projects {
+    text-align: center;
+    color: #323e4f;
+}
+
+.projects h3 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.projects h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rewards {
+    text-align: center;
+    color: #323e4f;
+}
+
+.rewards h3 {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.rewards h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.parallax {
+    position: relative;
+}
+
+.parallax_bg {
+    display: block;
+    height: 500px;
+}
+
+.content {
+    position: absolute;
+    bottom: -180%;
+    right: 0%;
+    left: 0%;
+    z-index: 12;
+}
+
+.parallax_bg_2 {
+    display: none;
+}
+
+.stat_bg {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 991px){
+    .content {
+        right: 0%;
+        left: 0%;
+        bottom: -204%;
+    }
+}
+@media (max-width: 767px) {
+    .parallax_bg {
+        display: none;
+    }
+
+    .parallax_bg_2 {
+        display: block;
+        height: 800px;
+        z-index: 1;
+    }
+
+    .stat_bg::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 10;
+    }
+
+    .content {
+        right: 0%;
+        left: 0%;
+        bottom: -115%;
+    }
+    
+    .content_2{
+        flex-wrap: wrap;
+    }
+}
+
