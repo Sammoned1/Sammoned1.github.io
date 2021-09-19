@@ -1,0 +1,791 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*
+* {
+	border: 1px solid red;
+}
+*/
+
+body {
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	font-family: 'Rubik', sans-serif;
+}
+
+.navIcon {
+	line-height: 55px;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	color: #FFF4E7 !important;
+	cursor: pointer;
+}
+
+nav {
+	position: relative;
+	color: #FFF4E7;
+	height: 80px;
+	width: 100%;
+	background: #E2A371;
+	position: fixed;
+	z-index: 100;
+	transform: translateY(-80px);
+	transition: all 0.8s;
+}
+
+.navTitle{
+	position: absolute;
+	top: 80px;
+	right: 0;
+	height: 0px;
+	width: 300px;
+	background: #171916;
+	color: #FFF4E7;
+	line-height: 39px;
+	text-align: center;
+	overflow: hidden;
+	transition: all 0.6s ease;
+}
+.navTitle.active{
+	height: 200px;
+}
+.navTitle li{
+	width: 100%;
+	font-size: 18px;
+	list-style: none;
+}
+.navTitle a, .navTitle a:visited{
+	text-decoration: none;
+	color: #FFF4E7;
+	width: 100%;
+	display: block;
+}
+
+nav.active {
+	transform: translateY(0);
+}
+
+.ava {
+	height: 60px;
+	width: 60px;
+	min-width: 60px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.navigation a,
+.navigation a:visited {
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	line-height: 76px;
+	font-size: 18px;
+	font-family: 'Rubik';
+}
+
+.navigation li {
+	float: left;
+	list-style: none;
+}
+
+.logo {
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Chakra';
+}
+
+.main {
+	width: 100%;
+	overflow-y: hidden;
+	max-height: 1500px;
+	height: 1500px;
+	position: relative;
+	z-index: 0;
+}
+
+.angle{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, 100px);
+	top: 58.67%;
+	color: white;
+	text-align: center;
+	line-height: 66px;
+	font-size: 50px;
+	transition: all 0.6s ease;
+	opacity: 0;
+}
+
+.angle.active{
+	opacity: 1;
+	transform: translate(-50%, 0);
+}
+
+.parallax_bg {
+	z-index: 0;
+	width: 100%;
+	height: 1500px;
+	background: url("../img/miguel-hernandez-8ql_bGUvEno-unsplash.jpg") 50% 20%/cover no-repeat;
+}
+
+.content{
+	z-index:3;
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom: 0;
+	
+}
+
+.title_container {
+	margin-top: 60% !important;
+	height: 30%;
+	width: 620px;
+}
+
+.title_container p {
+	font-family: 'Rubik', sans-serif;
+	color: #FFF4E7;
+	height: 100%;
+	width: 100%;
+	font-size: 50px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.contact,
+.title {
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+}
+
+.title.active,
+.contact.active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.point {
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: 0.8s;
+}
+
+.point.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.point1:nth-child(2) {
+	transition-delay: 0.2s;
+}
+
+.point1:nth-child(3) {
+	transition-delay: 0.4s;
+}
+
+.point1:nth-child(4) {
+	transition-delay: 0.6s;
+}
+
+.point2:nth-child(1) {
+	transition-delay: 0.8s;
+}
+
+.point2:nth-child(2) {
+	transition-delay: 1s;
+}
+
+.point2:nth-child(3) {
+	transition-delay: 1.2s;
+}
+
+.point2:nth-child(4) {
+	transition-delay: 1.4s;
+}
+.point3:nth-child(2) {
+	transition-delay: 0.2s;
+}
+
+.point3:nth-child(3) {
+	transition-delay: 0.4s;
+}
+
+.point3:nth-child(4) {
+	transition-delay: 0.6s;
+}
+
+.point3:nth-child(5) {
+	transition-delay: 0.8s;
+}
+
+.point3:nth-child(6) {
+	transition-delay: 1s;
+}
+
+.point3:nth-child(7) {
+	transition-delay: 1.2s;
+}
+
+.point3:nth-child(8) {
+	transition-delay: 1.4s;
+}
+
+
+.main button {
+	width: 200px;
+	height: 60px;
+	border: 2px solid #FFF4E7;
+	color: #FFF4E7;
+	background-color: #171916;
+	border-radius: 30px;
+	font-size: 18px;
+}
+
+
+.aboutMe {
+	width: 100%;
+	height: 800px;
+	background: #1C201B;
+	padding-top: 2%;
+}
+
+.buttons {
+	width: 390px;
+}
+
+h2 {
+	width: 100%;
+	height: 90px;
+	font-family: 'RubikMonoOne';
+	color: white;
+	font-size: 55px;
+	text-align: center;
+	line-height: 90px;
+}
+
+.photo {
+	height: 440px;
+	width: 440px;
+	border: 2px solid white;
+}
+
+.info {
+	width: 450px;
+	margin-left: 30px;
+	color: white;
+}
+
+.info h3 {
+	font-size: 22px;
+
+}
+
+.info button {
+	width: 170px;
+	height: 40px;
+	border: 1px solid white;
+	background: none;
+	color: white;
+	border-radius: 30px;
+	font-size: 14px;
+}
+
+.line {
+	width: 450px;
+	height: 0;
+	border: 1px solid white;
+}
+
+.aboutMe li {
+	position: relative;
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.info li::before {
+	content: '';
+	position: absolute;
+	background-color: #E3BFA2;
+	height: 10px;
+	width: 10px;
+	left: -16%;
+	right: 0;
+	bottom: 0;
+	top: 30%;
+}
+
+.services {
+	padding-top: 2%;
+	height: 900px;
+	width: 100%;
+	background: #171916;
+}
+
+.service {
+	width: 340px;
+	height: 378px;
+	background: #1C201B;
+	border-radius: 50px;
+
+}
+
+.Icon {
+	margin: auto;
+	width: 110px;
+	height: 110px;
+	border: 2px solid #E3BFA2;
+	border-radius: 35px;
+	color: #E3BFA2;
+	text-align: center;
+	line-height: 115px;
+	font-size: 45px;
+	transition: all 0.4s;
+}
+
+.Icon.active {
+	border-radius: 50%;
+	transition: all 0.4s;
+	background: #FFF4E7;
+	color: #E2A371;
+	border: 2px solid #E2A371;
+}
+
+.services h3 {
+	color: white;
+	width: 100%;
+	text-align: center;
+	height: 26px;
+	font-size: 24px;
+}
+
+.services .row{
+	margin-top: 4%;
+}
+
+.services p {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	height: 120px;
+}
+
+.cases {
+	padding-top: 2%;
+	width: 100%;
+	height: 1300px;
+	background: url("../img/mark-boss-YvWKfaw9zCw-unsplash.jpg") 100% 100%/cover no-repeat;
+}
+
+.cases h2 {
+	color: #171916;
+}
+
+.frame {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	width: 60%;
+	height: 328px;
+	background: #1C201B;
+	color: #FFF4E7;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+
+.contacts {
+	padding-top: 5%;
+	height: 610px;
+	width: 100%;
+	background: #171916;
+}
+
+
+
+.contacts p {
+	font-family: "Chakra", sans-serif;
+	font-size: 20px;
+	color: white;
+}
+
+.contacts span {
+	color: #E3BFA2;
+}
+
+.part {
+	line-height: 38px;
+}
+
+.ava.last {
+	width: 115px;
+	height: 115px;
+}
+
+footer {
+	color: white;
+	height: 390px;
+	width: 100%;
+	background-color: #1C201B;
+}
+
+.network {
+	height: 60px;
+	width: 60px;
+	border: 2px solid #E3BFA2;
+	border-radius: 18px;
+	color: #E3BFA2;
+	line-height: 62px;
+	font-size: 20px;
+	transition: all 0.4s;
+}
+
+.network a,
+.network a:visited {
+	color: #E3BFA2;
+	text-decoration: none;
+	height: 60px;
+	width: 60px;
+	display: block;
+	text-align: center;
+	transform: translate(-23%, -3%);
+	transition: all 0.4s;
+}
+
+.network:hover {
+	background: #FFF4E7;
+	border-radius: 50%;
+	transition: all 0.4s;
+	border: 2px solid #E2A371;
+}
+
+.network a:hover {
+	color: #E2A371;
+	transition: all 0.4s;
+}
+
+.networkFrame {
+	width: 400px;
+}
+
+footer .logo {
+	width: 300px;
+}
+
+footer span {
+	font-family: 'Chakra', sans-serif;
+	text-align: center;
+	font-size: 16;
+}
+
+.dev {
+	border: 1px solid red;
+}
+
+@media(max-width:1399px) {
+	.main {
+		height: 1400px;
+	}
+
+	.photo {
+		width: 380px;
+		height: 380px;
+	}
+}
+
+@media(max-width:1300px) {
+	.main {
+		height: 1350px;
+	}
+}
+
+@media(max-width:1199px) {
+	.main {
+		height: 1300px;
+	}
+
+	#service3 {
+		transform: translateY(-100px);
+	}
+
+	.title_container {
+		transform: translateY(120px);
+	}
+
+	.services {
+		height: 1100px;
+	}
+
+	.cases {
+		height: 1100px;
+	}
+
+}
+
+@media(max-width:991px) {
+	.title_container {
+		transform: translateY(250px);
+	}
+
+	.main {
+		height: 1200px;
+	}
+
+	.photoBlock {
+		width: 100%;
+	}
+
+	.photo {
+		width: 440px;
+		height: 440px;
+	}
+
+	.aboutMe {
+		height: 1200px;
+	}
+
+	.infoBlock {
+		width: 100%;
+	}
+
+	.line {
+		width: 600px;
+	}
+
+	.buttons {
+		width: 100%;
+	}
+
+	.contacts {
+		height: 700px;
+	}
+
+	.frame {
+		width: 80%;
+		height: 400px;
+	}
+
+	.info {
+		margin-top: 20px;
+	}
+}
+
+@media(max-width:767px) {
+	.title_container {
+		transform: translateY(350px);
+	}
+
+	.title_container p {
+		font-size: 40px;
+	}
+
+	.contacts p {
+		font-size: 18px;
+	}
+
+	.contacts {
+		height: 700px;
+	}
+
+	#service3 {
+		transform: translateY(0);
+	}
+
+	.services {
+		height: 1500px;
+	}
+
+	.service {
+		margin: 15px 0 15px 0;
+	}
+}
+
+@media(max-width:575px) {
+	.contactRow {
+		width: 106%;
+	}
+
+	.contactRow > div {
+		width: 100%;
+	}
+
+	.contacts {
+		height: 1000px;
+	}
+
+	.contacts p {
+		text-align: center;
+	}
+
+	.info li::before {
+		left: -20px;
+	}
+
+	.aboutMe {
+		height: 1300px;
+	}
+
+	.part {
+		width: 100%;
+	}
+}
+
+@media(max-width:524px) {
+	.photo {
+		width: 400px;
+		height: 400px;
+	}
+
+	.aboutMe {
+		height: 1200px;
+	}
+
+}
+
+
+
+@media(max-width:482px) {
+	.title_container p {
+		font-size: 35px;
+	}
+
+	.main button {
+		height: 50px;
+		width: 180px;
+		font-size: 16px;
+	}
+
+	nav {
+		height: 60px;
+	}
+	
+	.navTitle{
+		top: 60px;
+		width: 100%;
+	}
+
+	.ava {
+		height: 45px;
+		width: 45px;
+		min-width: 45px;
+	}
+
+	.navIcon {
+		line-height: 60px;
+	}
+
+	.logo {
+		font-size: 25px;
+	}
+
+	.photo {
+		width: 360px;
+		height: 360px;
+	}
+
+	.frame {
+		transform: translateY(50px);
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+}
+
+@media(max-width:443px) {
+	.photo {
+		height: 340px;
+		width: 340px;
+	}
+
+	.frame {
+		height: 400px;
+	}
+}
+
+@media(max-width:426px) {
+	.title_container p {
+		font-size: 30px;
+	}
+
+	.main button {
+		height: 45px;
+		width: 170px;
+		font-size: 16px;
+	}
+
+	.photo {
+		width: 300px;
+		height: 300px;
+	}
+
+	#service1,
+	#service2 {
+		transform: scale(0.8), ;
+	}
+}
+
+@media(max-width:400px) {
+	.main {
+		height: 1100px;
+	}
+
+	.main button {
+		height: 45px;
+		width: 160px;
+		font-size: 14px;
+	}
+
+
+}
+
+@media(max-width:383px) {
+	.photo {
+		width: 290px;
+		height: 290px;
+	}
+}
+
+@font-face {
+	/*	основной текст*/
+	font-family: "Rubik";
+	src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+	font-style: normal;
+	font-weight: medium;
+}
+
+@font-face {
+	/*	Лого*/
+	font-family: "Chakra";
+	src: url("../fonts/ChakraPetch-Medium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	/*	Заголовки*/
+	font-family: 'RubikMonoOne';
+	src: url("../fonts/RubikMonoOne-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
