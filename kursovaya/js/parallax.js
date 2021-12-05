@@ -9,6 +9,5 @@ window.addEventListener('scroll', function () {
 
 function parallax(top) {
 	bg.style.cssText = `
-	transform: translateY(${top/2}px);
-	`;
+	transform: translateY(${top/2}px);`;
 }

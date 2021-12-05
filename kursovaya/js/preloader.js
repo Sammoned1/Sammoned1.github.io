@@ -14,5 +14,5 @@ document.body.onload = function(){
 			title.classList.add('loaded');
 		}
 		
-	}, 1000)
+	}, 500)
 }
