@@ -26,8 +26,6 @@ if (animItems.length > 0) {
 	animOnScroll();
 }
 
-// Функция из инета
-
 function offset(el) {
 	const rect = el.getBoundingClientRect(),
 		scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
